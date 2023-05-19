@@ -57,3 +57,54 @@ a {
    justify-items: center;
    padding: 3.2rem;
 }
+
+
+.finishModal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  max-width: 100%;
+  width: 84.7rem;
+  height: 53.7rem;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  text-align: center;
+}
+.finishPageLinkGroup{
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+
+.finishPageLinkGroup a {
+  font-size: 2rem;
+}
+.listLink{
+  margin: auto;
+  width: 29.7rem;
+  max-width: 100%;
+  padding: 1.8rem 6.5rem;
+  background-color: #62A1EB;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.mainLink{
+  color: #62A1EB;
+}
+.finishHeading{
+  font-size: 2.5rem;
+  color: #000;
+}
+@media(max-width:800px){
+  .landingNavigationSection img{
+    max-width: 100%;
+  }
+  .landingBtn{
+    width: 100%;
+  }
+  .detailsHeader{
+    padding: 0 1rem;
+  }
+}

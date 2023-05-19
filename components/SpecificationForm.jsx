@@ -1,6 +1,6 @@
 import { Fragment, useContext, useState } from "react";
 import Head from "next/head";
-import  { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import classes from "./SpecificationForm.module.css";
 import MainHeader from "@/components/MainHeader";
 import FormbackgroundLayout from "@/components/Layout/FormBackgroundLayout";
@@ -8,24 +8,32 @@ import FormLayout from "@/components/Layout/FormLayout";
 import Input from "@/components/Input";
 import Button from "@/components/Button";
 import Link from "next/link";
+import FormContext from "@/store/form-context";
 const SpecificationForm = (props) => {
   const [specFormValue, setSpecFormValue] = useState({});
-  const router = useRouter()
-
+  const router = useRouter();
+  const formCtx = useContext(FormContext)
   const formSubmitHandler = (e) => {
     e.preventDefault();
+    if(!formCtx.formData || !formCtx.formData.employeeFormValid){
+      alert('გთხოვთ ორივე ფორმა შეავსოთ სანამ დაიმახსოვრებთ')
+      router.push('/EmployeeForm')
+      return
+    }
     props.onFormSubmit({
       ...props.formData,
-      ...specFormValue
-    })
-    router.push('/')
+      ...specFormValue,
+    });
+    formCtx.updateDataHandler({})
+    router.push("/FinishPage");
   };
-  const imageInputHandler = (e) => {
-    setSpecFormValue((prevState) => ({
-      ...prevState,
-      image: e.target.value,
-    }));
-  };
+  // const imageInputHandler = (e) => {
+  //   setSpecFormValue((prevState) => ({
+  //     ...prevState,
+  //     image: e.target.value,
+  //   }));
+  // };
+ 
   const laptopNameStateHandler = (e) => {
     setSpecFormValue((prevState) => ({
       ...prevState,
@@ -108,7 +116,7 @@ const SpecificationForm = (props) => {
               parentClass={classes.fileUploadInput}
               labelText="ატვირთე "
               uploadText="ჩააგდე ან ატვირთე ლეპტოპის ფოტო"
-              onChange={imageInputHandler}
+              // onChange={imageInputHandler}
             />
             <div className={classes.brandInputs}>
               <Input

@@ -1,0 +1,8 @@
+.finishPageContainer{
+    width: 100%;
+    height: 100vh;
+    background-color: #4A4A4A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

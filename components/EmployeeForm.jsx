@@ -21,7 +21,13 @@ const EmployeeForm = (props) => {
 
   /////////////////////////////////////
   /////////////////////////////////////
-
+  const formIsValid =
+    firstNameInputValid &&
+    lastNameInputValid &&
+    teamInputValid &&
+    positionInputValid &&
+    emailInputValid &&
+    phoneInputValid;
   function firstNameValidation(e) {
     const georgianRegex = /^[\u10D0-\u10FF]+$/; // Georgian Unicode range
     if (!georgianRegex.test(e.target.value) || e.target.value.length < 2) {
@@ -68,7 +74,6 @@ const EmployeeForm = (props) => {
     }
     setFormInputState((prevState) => ({ ...prevState, phone: e.target.value }));
     setPhoneInputValid(true);
-    return null;
   };
 
   const selectTeamValidation = (e) => {
@@ -106,9 +111,10 @@ const EmployeeForm = (props) => {
       return;
     }
 
-    props.onFormSubmit(formInputState)
-    // router.push("/SpecificationForm");
+    props.onFormSubmit({...formInputState,employeeFormValid:formIsValid});
+    router.push("/SpecificationForm");
   };
+
   return (
     <Fragment>
       <Head>
@@ -204,7 +210,9 @@ const EmployeeForm = (props) => {
               required
             />
             <div className={classes.nextBtn}>
-              <Button>შემდეგი</Button>
+              <Button className={classes.submitBtn} disabled={!formIsValid}>
+                შემდეგი
+              </Button>
             </div>
           </form>
         </FormLayout>

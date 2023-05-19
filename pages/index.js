@@ -19,14 +19,18 @@ export default function HomePage() {
         <Image src={redberryLogo} alt="RedBerry company logo" />
       </header>
       <section className="landingNavigationSection">
-        <Image src={landingPageImage} alt="Landing Image" />
+        <Image
+          src={landingPageImage}
+          className="landingPageImage"
+          alt="Landing Image"
+        />
         <div className="LandingNavigationLinkGroup">
-        <Button className='landingBtn'>
-          <Link href="/EmployeeForm">ᲩᲐᲜᲐᲬᲔᲠᲘᲡ ᲓᲐᲛᲐᲢᲔᲑᲐ</Link>
-        </Button>
-        <Button className='landingBtn'>
-          <Link href="EmployeeFormList">ᲩᲐᲜᲐᲬᲔᲠᲔᲑᲘᲡ ᲡᲘᲐ</Link>
-        </Button>
+          <Button className="landingBtn">
+            <Link href="/EmployeeForm">ᲩᲐᲜᲐᲬᲔᲠᲘᲡ ᲓᲐᲛᲐᲢᲔᲑᲐ</Link>
+          </Button>
+          <Button className="landingBtn">
+            <Link href="EmployeeFormList">ᲩᲐᲜᲐᲬᲔᲠᲔᲑᲘᲡ ᲡᲘᲐ</Link>
+          </Button>
         </div>
       </section>
     </Fragment>

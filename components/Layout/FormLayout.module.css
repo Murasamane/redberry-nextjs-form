@@ -6,3 +6,14 @@
     border-radius: 1.8rem;
     margin: auto;
 }
+
+@media(max-width:1060px){
+    .container{
+        padding: 3rem 0.6rem;
+    }
+}
+@media(max-width:920px){
+    .container{
+        padding: 3rem 0.6rem;
+    }
+}

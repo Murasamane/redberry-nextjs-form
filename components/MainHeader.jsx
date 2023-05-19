@@ -16,19 +16,32 @@ const MainHeader = () => {
           <li className={classes.mainNavItem}>
             <Link
               href="/EmployeeForm"
-              className={`${pathname === "EmployeeForm" ? classes.active : ''}`}
+              className={`${
+                pathname === "EmployeeForm" ? classes.active : ""
+              } ${
+                pathname !== "EmployeeForm" ? classes.mediaInactiveClass : ""
+              }`}
             >
               თანამშრომლის ინფო
             </Link>
           </li>
+            <p className={`${ pathname === "EmployeeForm" ? classes.activePage : ''}`}>1/2</p>
           <li className={classes.mainNavItem}>
+            
             <Link
               href="/SpecificationForm"
-              className={`${pathname === "SpecificationForm" ? classes.active : ''}`}
+              className={`${
+                pathname === "SpecificationForm" ? classes.active : ""
+              } ${
+                pathname !== "SpecificationForm"
+                  ? classes.mediaInactiveClass
+                  : ""
+              }`}
             >
               ლეპტოპის მახასიათებლები
             </Link>
           </li>
+            <p className={`${ pathname === "SpecificationForm" ? classes.activePage : ''}`}>2/2</p>
         </ul>
       </nav>
     </header>

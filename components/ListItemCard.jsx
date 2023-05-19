@@ -14,7 +14,7 @@ const ListItemCard = (props) => {
         <Image src={placeholderImage} alt="card image"/>
       </div>
       <div className={classes.textContainer}>
-        <p className={classes.fullName}>{props.data.firstName}</p>
+        <p className={classes.fullName}>{props.data.firstName} {props.data.lastName}</p>
         <p className={classes.cpuInfo}>{props.data.cpu}</p>
         <div>
         <button className={classes.linkBtn} onClick={showDetailsHandler}>მეტის ნახვა</button>

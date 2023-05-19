@@ -3,6 +3,16 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
-    gap: 5.3rem;
+    /* gap: 5.3rem; */
     padding: 9.8rem;
+}
+
+
+
+@media(max-width:1290px){
+    .container{
+        grid-template-columns: 1fr;
+        padding: 4.5rem;
+        gap: 2rem;
+    }
 }

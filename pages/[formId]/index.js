@@ -68,7 +68,7 @@ export async function getStaticProps(context) {
         position: selectedForm.position,
         email: selectedForm.email,
         phone: selectedForm.phone,
-        image: selectedForm.image,
+        // image: selectedForm.image,
         laptopName: selectedForm.laptopName,
         brandName: selectedForm.brandName,
         cpu: selectedForm.cpu,

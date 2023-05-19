@@ -155,3 +155,36 @@
       font-size: 1.8rem;
       color: #62a1eb;
   }
+
+
+  @media(max-width:925px){
+    .fileUploadInput{
+      width: 100%;
+    }
+    .brandInputs,.cpuInputs,.ramInputs,.laptopDateAndPriceInputs{
+      flex-direction: column;
+      align-items: center;
+    }
+    .memoryBox{
+      align-items: center;
+    }
+    .laptopDateAndPriceInputs input{
+      width: 100%;
+    }
+
+  }
+
+
+  @media(max-width:450px){
+    .formBtnNavigation{
+      justify-content: center;
+      gap: 5rem;
+    }
+    .brandInput,.brandSelect,.ramInput{
+      width: 100%;
+    }
+    .formBtnNavigation button{
+      width: 18.2rem;
+      padding: 1.5rem 2rem;
+    }
+  }

@@ -20,3 +20,14 @@
     background:none;
     cursor: pointer;
 }
+
+@media(max-width:1290px){
+    .cardContainer{
+        width: 100%;
+        align-items: center;
+        justify-items: center;
+    }
+    .cardContainer img{
+        width: 100%;
+    }
+}

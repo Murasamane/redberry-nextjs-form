@@ -1,7 +1,7 @@
-.form{
-    display: flex;
-    flex-direction: column;
-    gap: 5.3rem;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5.3rem;
 }
 
 .nameInputs {
@@ -24,21 +24,40 @@
   padding: 1.9rem 1.6rem 2rem 1.6rem;
   font-size: 1.6rem;
   border-radius: 0.8rem;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   border: none;
 }
 
-.addressInput{
-    border: 0.1rem solid #8ac0e2;
-    padding: 1.9rem 1.6rem 2rem 1.6rem;
-    max-width: 100%;
-    border-radius: 0.8rem;
+.addressInput {
+  border: 0.1rem solid #8ac0e2;
+  padding: 1.9rem 1.6rem 2rem 1.6rem;
+  max-width: 100%;
+  border-radius: 0.8rem;
 }
 
-.nextBtn{
-    margin-left: auto;
+.nextBtn {
+  margin-left: auto;
 }
 
-.invalid{
+.invalid {
   border: 1px solid red !important;
+}
+.buttonContainer {
+  text-align: right;
+}
+.submitBtn:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+@media (max-width: 920px) {
+  .nameInputs {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px) {
+  .nameInput {
+   width: 100%;
+  }
 }
