@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import backImage from "../../assets/images/backArrow.png";
+import backImage from "../../assets/images/BackArrow.png";
 const DetailsPage = (props) => {
   return (
     <Fragment>
