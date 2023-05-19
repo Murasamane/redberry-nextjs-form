@@ -60,7 +60,7 @@ export async function getStaticProps() {
         price: item.price,
         laptopState: item.laptopState,
       })),
-      revalidate: 1,
     },
+    revalidate: 1,
   };
 }
