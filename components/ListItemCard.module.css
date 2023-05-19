@@ -1,0 +1,22 @@
+.cardContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 56.3rem;
+    max-width: 100%;
+    background-color: #EAFAFF;
+}
+
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.linkBtn{
+    display: inline-block;
+    border: none;
+    background:none;
+    cursor: pointer;
+}

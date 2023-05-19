@@ -1,0 +1,44 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 5.3rem;
+}
+
+.nameInputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6.2rem;
+}
+.nameInput {
+  width: 40.7rem;
+  border-radius: 0.8rem;
+  border: 0.1rem solid #8ac0e2;
+  font-size: 1.6rem;
+  max-width: 100%;
+  padding: 1.9rem 1.6rem 2rem 1.6rem;
+}
+.formSelect {
+  width: 100%;
+  max-width: 100%;
+  padding: 1.9rem 1.6rem 2rem 1.6rem;
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
+  background-color: #EBEBEB;
+  border: none;
+}
+
+.addressInput{
+    border: 0.1rem solid #8ac0e2;
+    padding: 1.9rem 1.6rem 2rem 1.6rem;
+    max-width: 100%;
+    border-radius: 0.8rem;
+}
+
+.nextBtn{
+    margin-left: auto;
+}
+
+.invalid{
+  border: 1px solid red !important;
+}

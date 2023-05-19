@@ -1,0 +1,43 @@
+.detailsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 9.8rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8.4rem;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 6.8rem;
+}
+.propertyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-self: left;
+}
+.propertiesContainers {
+  display: flex;
+  gap: 8rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.properties {
+  font-size: 2rem;
+}
+
+
+.underline {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    height: 0.1rem;
+    background-color: #c7c7c7;
+  }

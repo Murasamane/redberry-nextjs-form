@@ -1,0 +1,15 @@
+.input__container{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.input__container label{
+    font-size: 1.8rem;
+}
+
+.input__container p {
+    font-size: 1.4rem;
+    color: #2E2E2E;
+    font-weight: 300;
+}
