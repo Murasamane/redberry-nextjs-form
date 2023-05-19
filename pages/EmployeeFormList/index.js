@@ -34,8 +34,8 @@ export async function getStaticProps() {
   const client = await MongoClient.connect(
     "mongodb+srv://giorgigurgenidze133:E2s8IJYgHXhVaseP@cluster0.mv9ohhm.mongodb.net/redberryForm?retryWrites=true&w=majority"
   );
-  const db = await client.db();
-  const employeeListCollection = await db.collection("forms");
+  const db = client.db();
+  const employeeListCollection = db.collection("forms");
   const employeeList = await employeeListCollection.find().toArray();
 
   return {
