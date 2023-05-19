@@ -21,7 +21,7 @@ const DetailsPage = (props) => {
         </Link>
         <h2>ᲚᲔᲞᲢᲝᲞᲘᲡ ᲘᲜᲤᲝ</h2>
       </header>
-      <SpecificationDetail data={props.data}/>
+      <SpecificationDetail data={props.data} />
     </Fragment>
   );
 };

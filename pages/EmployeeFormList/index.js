@@ -5,7 +5,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
-import backImage from '../../assets/images/backArrow.png'
+import backImage from '../../assets/images/BackArrow.png'
 const EmployeeFormList = (props) => {
     // console.log(props.employeeList);
   return <Fragment>
