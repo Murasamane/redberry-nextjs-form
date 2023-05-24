@@ -15,6 +15,8 @@ const Input = forwardRef((props, ref) => {
         placeholder={props.placeholder}
         onChange={props.onChange}
         required={props.required}
+        accept={props.accept}
+        name={props.name}
       />
       <p>{props.hint}</p>
     </div>

@@ -12,28 +12,41 @@ import FormContext from "@/store/form-context";
 const SpecificationForm = (props) => {
   const [specFormValue, setSpecFormValue] = useState({});
   const router = useRouter();
-  const formCtx = useContext(FormContext)
-  const formSubmitHandler = (e) => {
+  const formCtx = useContext(FormContext);
+  const formSubmitHandler = async (e) => {
     e.preventDefault();
-    if(!formCtx.formData || !formCtx.formData.employeeFormValid){
-      alert('გთხოვთ ორივე ფორმა შეავსოთ სანამ დაიმახსოვრებთ')
-      router.push('/EmployeeForm')
-      return
+    if (!formCtx.formData || !formCtx.formData.employeeFormValid) {
+      alert("გთხოვთ ორივე ფორმა შეავსოთ სანამ დაიმახსოვრებთ");
+      router.push("/EmployeeForm");
+      return;
     }
+    const form = e.currentTarget;
+    const fileInput = Array.from(form.elements).find(
+      ({ name }) => name === "file"
+    );
+
+    const imageFormData = new FormData();
+    imageFormData.append("file", fileInput.files[0]);
+    imageFormData.append("upload_preset", "redberry-upload");
+    const response = await fetch(
+      "https://api.cloudinary.com/v1_1/du2uozszj/image/upload",
+      {
+        method: "POST",
+        body: imageFormData,
+      }
+    );
+
+    const data = await response.json();
+
     props.onFormSubmit({
       ...props.formData,
+      image: data.url,
       ...specFormValue,
     });
-    formCtx.updateDataHandler({})
+
+    formCtx.updateDataHandler({});
     router.push("/FinishPage");
   };
-  // const imageInputHandler = (e) => {
-  //   setSpecFormValue((prevState) => ({
-  //     ...prevState,
-  //     image: e.target.value,
-  //   }));
-  // };
- 
   const laptopNameStateHandler = (e) => {
     setSpecFormValue((prevState) => ({
       ...prevState,
@@ -116,7 +129,9 @@ const SpecificationForm = (props) => {
               parentClass={classes.fileUploadInput}
               labelText="ატვირთე "
               uploadText="ჩააგდე ან ატვირთე ლეპტოპის ფოტო"
-              // onChange={imageInputHandler}
+              accept="image/png, image/jpeg"
+              name="file"
+              required
             />
             <div className={classes.brandInputs}>
               <Input

@@ -8,7 +8,7 @@ const SpecificationDetail = (props) => {
       <section className={classes.detailsSection}>
             <div className={classes.container}>
             <div className={classes.gridContainer}>
-          <Image src={placeholderImage} />
+          <Image src={props.data.image} width='400' height='400' alt="detail image" />
           <div className={classes.propertyContainer}>
             <div className={classes.propertiesContainers}>
               <p className={classes.properties}>სახელი:</p>

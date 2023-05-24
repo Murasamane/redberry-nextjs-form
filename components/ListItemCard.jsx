@@ -11,7 +11,7 @@ const ListItemCard = (props) => {
   return (
     <div className={classes.cardContainer}>
       <div className={classes.imageContainer}>
-        <Image src={placeholderImage} alt="card image"/>
+        <Image src={props.data.image} width='200' height='200' alt="card image"/>
       </div>
       <div className={classes.textContainer}>
         <p className={classes.fullName}>{props.data.firstName} {props.data.lastName}</p>

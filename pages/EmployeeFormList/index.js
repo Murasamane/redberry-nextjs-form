@@ -48,7 +48,7 @@ export async function getStaticProps() {
         position: item.position,
         email: item.email,
         phone: item.phone,
-        // image: item.image,
+        image: item.image,
         laptopName: item.laptopName,
         brandName: item.brandName,
         cpu: item.cpu,
