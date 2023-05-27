@@ -15,12 +15,15 @@
 }
 
 .linkBtn{
+    font-size: 1.6rem;
     display: inline-block;
     border: none;
     background:none;
     cursor: pointer;
 }
-
+.fullName,.cpuInfo{
+    font-size: 2rem;
+}
 @media(max-width:1290px){
     .cardContainer{
         width: 100%;

@@ -19,7 +19,13 @@ const DetailsPage = (props) => {
         <Link href="EmployeeFormList" className="backBtn">
           <Image src={backImage} alt="back button" />
         </Link>
-        <h2>ᲚᲔᲞᲢᲝᲞᲘᲡ ᲘᲜᲤᲝ</h2>
+        <h2
+          style={{
+            fontSize: "3rem",
+          }}
+        >
+          ᲚᲔᲞᲢᲝᲞᲘᲡ ᲘᲜᲤᲝ
+        </h2>
       </header>
       <SpecificationDetail data={props.data} />
     </Fragment>

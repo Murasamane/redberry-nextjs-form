@@ -17,7 +17,9 @@ const EmployeeFormList = (props) => {
         <Link href="/" className="backBtn">
           <Image src={backImage} alt="back button" />
         </Link>
-        <h2>ᲩᲐᲜᲐᲬᲔᲠᲔᲑᲘᲡ ᲡᲘᲐ</h2>
+        <h2 style={{
+          fontSize:'3rem'
+        }}>ᲩᲐᲜᲐᲬᲔᲠᲔᲑᲘᲡ ᲡᲘᲐ</h2>
       </header>
       <ListLayout>
         {props.employeeList.map((listItem) => (
