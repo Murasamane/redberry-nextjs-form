@@ -11,6 +11,7 @@ import Link from "next/link";
 import FormContext from "@/store/form-context";
 const SpecificationForm = (props) => {
   const [specFormValue, setSpecFormValue] = useState({});
+  const [imageIsValid, setImageIsValid] = useState(null);
   const router = useRouter();
   const formCtx = useContext(FormContext);
   const formSubmitHandler = async (e) => {
@@ -109,7 +110,13 @@ const SpecificationForm = (props) => {
       laptopState: e.target.value,
     }));
   };
-
+  const imageValidationHandler = (e) => {
+    if (!e.target.value) {
+      setImageIsValid(false);
+      return;
+    }
+    setImageIsValid(true);
+  };
   return (
     <Fragment>
       <Head>
@@ -132,6 +139,7 @@ const SpecificationForm = (props) => {
               accept="image/png, image/jpeg"
               name="file"
               required
+              onChange={imageValidationHandler}
             />
             <div className={classes.brandInputs}>
               <Input

@@ -81,6 +81,7 @@ export async function getStaticProps(context) {
         laptopState: selectedForm.laptopState,
       },
     },
+    revalidate: 1,
   };
 }
 export default DetailsPage;
